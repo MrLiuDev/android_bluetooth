@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchBTActivity">
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/ll_open_bluetooth"
+        android:paddingLeft="@dimen/setup_icon_padding_horizontal"
+        android:paddingRight="@dimen/setup_icon_padding_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setup_line_height">
+        <TextView
+            android:textSize="@dimen/text_size_setup_icon_name"
+            android:text="开启蓝牙"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <android.support.v7.widget.SwitchCompat
+            android:duplicateParentState="true"
+            android:id="@+id/sc_bluetooth_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/setup_icon_padding_horizontal"
+        android:layout_marginRight="@dimen/setup_icon_padding_horizontal"
+        android:background="#B4B4B4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_bluetooth_devices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
