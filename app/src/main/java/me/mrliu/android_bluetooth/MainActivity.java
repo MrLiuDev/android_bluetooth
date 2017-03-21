@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnOpen.setOnClickListener(this);
         btnGetDevices.setOnClickListener(this);
         btnFindDevices.setOnClickListener(this);
+        findViewById(R.id.button).setOnClickListener(this);
     }
 
     private void setViews() {
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_find_devices:
                 findDevices();
+                break;
+            case R.id.button:
+                startActivity(new Intent(this, SearchBTActivity.class));
                 break;
         }
     }
